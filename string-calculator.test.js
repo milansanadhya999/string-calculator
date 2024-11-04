@@ -20,4 +20,8 @@ describe("string-calculator", () => {
     const number = add("1\n2,3");
     expect(number).toBe(6);
   });
+  test("string supporting different delimeters", () => {
+    const number = add("//;\n1;2");
+    expect(number).toBe(3);
+  });
 });
