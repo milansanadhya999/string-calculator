@@ -19,5 +19,8 @@ export const add = (string) => {
     if (cur < 0) negative_numbers.push(cur);
     return acc + cur;
   }, 0);
+  if (negative_numbers.length > 0) {
+    throw new Error(`negative numbers not allowed ${negativeNumbers}`);
+  }
   return result;
 };

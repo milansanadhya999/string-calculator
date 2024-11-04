@@ -24,4 +24,8 @@ describe("string-calculator", () => {
     const number = add("//;\n1;2");
     expect(number).toBe(3);
   });
+  test("should throw error when encounter negative numbers", () => {
+    const str = "//5,-7;-4,-2";
+    expect(() => add(str).toThrow("negative numbers not allowed <-7,-4,-2>"));
+  });
 });
