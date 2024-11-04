@@ -8,4 +8,8 @@ describe("string-calculator", () => {
     const number = add("5");
     expect(number).toBe(5);
   });
+  test("string containing only two numbers", () => {
+    const number = add("5,6");
+    expect(number).toBe(11);
+  });
 });
