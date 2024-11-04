@@ -13,7 +13,10 @@ export const add = (string) => {
     .split(splitPattern)
     .filter((str) => str.trim() !== "")
     .map((str) => parseFloat(str));
+
+  const negative_numbers = [];
   const result = numbers.reduce((acc, cur) => {
+    if (cur < 0) negative_numbers.push(cur);
     return acc + cur;
   }, 0);
   return result;
