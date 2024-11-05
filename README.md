@@ -31,3 +31,7 @@ This code is written step by step. You can check code at each commit. Only main 
 - Do npm install
 
 - Run 'npm install in the root folder'
+
+- Do npm start
+
+- Server will be hosted at http://localhost:3000

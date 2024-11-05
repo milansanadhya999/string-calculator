@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { add } from "../string-calculator";
 import styles from "./StringCalculator.module.css";
+import photo from "../photos/Incubyte.png";
 
 export const StringCalculator = () => {
   const [inputValue, setInputValue] = useState("");
@@ -24,13 +25,15 @@ export const StringCalculator = () => {
   };
 
   return (
-    <>
-      <div className={styles["string-calculator"]}>
+    <div className={styles["string-calculator"]}>
+      <img src={photo} alt="Calculator Icon" />
+      <h1>String Calculator App</h1>
+      <div>
         <input type="text" value={inputValue} onChange={handleInputChange} />
         <button onClick={calculateResult}>Calculate</button>
       </div>
-      {result !== null && <div>Result: {result}</div>}
+      {result !== null && <div className={styles.result}>Result: {result}</div>}
       {error && <div className={styles.error}>{error}</div>}
-    </>
+    </div>
   );
 };
