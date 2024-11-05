@@ -1,4 +1,4 @@
-import { add } from "./string-calculator";
+import { add } from "../string-calculator";
 describe("string-calculator", () => {
   test("empty string", () => {
     const number = add("");
